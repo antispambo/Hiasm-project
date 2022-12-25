@@ -1,0 +1,51 @@
+Make(delphi)
+ver(4.05 build 186)
+Add(MainForm,2953706,21,105)
+{
+ Width=554
+ Height=235
+ Caption="Antispambo (Mother Board)"
+ BorderStyle=3
+ Position=1
+}
+Add(MotherBoardInfo,4638281,168,105)
+{
+ link(onInfo,139228:doString,[(227,111)(227,151)(142,151)(142,181)])
+}
+Add(Timer,761153,84,105)
+{
+ link(onTimer,4638281:doInfo,[])
+}
+Add(FormatStr,139228,168,175)
+{
+ DataCount=4
+ Mask="Name: %1 \r\nManufacturer: %2\r\nModel: %3\r\nProduct: %4"
+ link(onFString,11226040:doText,[])
+ link(Str1,4638281:Name,[])
+ link(Str2,4638281:Manufacturer,[])
+ link(Str3,4638281:Model,[])
+ link(Str4,4638281:Product,[])
+}
+Add(Label,11226040,224,175)
+{
+ Left=5
+ Top=15
+ Width=510
+ Height=135
+ Font=[MS Sans Serif,12,0,0,1]
+ Caption="1\r\n2\r\n3\r\n4"
+ AutoSize=1
+}
+Add(Button,3638472,231,42)
+{
+ Left=15
+ Top=160
+ Caption="?"
+ link(onClick,9394955:doMessage,[])
+}
+Add(Message,9394955,301,42)
+{
+ Message="Author: Arslon Erkinov\r\nWeb-site: https://antispambo.com"
+ Caption="About"
+ Icon=4
+}
