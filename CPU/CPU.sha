@@ -1,0 +1,24 @@
+Make(delphi)
+ver(4.05 build 186)
+Add(MainForm,2953706,21,105)
+{
+ Width=527
+ Height=194
+ Caption="antispambo"
+ BorderStyle=3
+ Position=1
+}
+Add(CPUUsage,893962,224,161)
+{
+ link(onUsage,12585255:doAdd,[])
+}
+Add(Timer,13151171,140,161)
+{
+ link(onTimer,893962:doCollectCPUData,[])
+}
+Add(Grapher,12585255,308,161)
+{
+ Width=505
+ Height=150
+ MaxValues=20
+}
